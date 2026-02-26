@@ -18,7 +18,8 @@
       "Bash(gh auth status 2>&1)",
       "Bash(winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements 2>&1)",
       "Bash(export PATH=\"/c/Program Files/GitHub CLI:$PATH\" && gh auth status 2>&1)",
-      "Bash(cd /c/Users/hp/Desktop/ykefolds && export PATH=\"/c/Program Files/GitHub CLI:$PATH\" && gh repo create ykefolds --public --source=. --remote=origin --push 2>&1)"
+      "Bash(cd /c/Users/hp/Desktop/ykefolds && export PATH=\"/c/Program Files/GitHub CLI:$PATH\" && gh repo create ykefolds --public --source=. --remote=origin --push 2>&1)",
+      "Bash(cd /c/Users/hp/Desktop/ykefolds && npx next build 2>&1 | tail -20)"
     ]
   }
 }
