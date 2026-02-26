@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /c/Users/hp/Desktop/ykefolds && npx create-next-app@latest . --typescript --no-tailwind --no-eslint --src-dir --app --no-turbopack --import-alias \"@/*\" --use-npm 2>&1)",
+      "Bash(cd /c/Users/hp/Desktop && npx create-next-app ykefolds-temp --typescript --no-tailwind --no-eslint --src-dir --app --no-turbopack --import-alias \"@/*\" --use-npm --no-rc 2>&1 << EOF\nNo\nEOF)",
+      "Bash(echo Done copying:*)",
+      "Bash(echo Config files copied:*)",
+      "Bash(echo src and public copied:*)",
+      "Bash(cd:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(sleep 5 && curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000 2>&1)",
+      "Bash(cd /c/Users/hp/Downloads/ykefolds && python3 -c \"\nfrom docx import Document\ndoc = Document\\('ABOUT THE COMPANY.docx'\\)\nfor para in doc.paragraphs:\n    if para.text.strip\\(\\):\n        print\\(para.text\\)\n\" 2>&1 || python -c \"\nfrom docx import Document\ndoc = Document\\('ABOUT THE COMPANY.docx'\\)\nfor para in doc.paragraphs:\n    if para.text.strip\\(\\):\n        print\\(para.text\\)\n\" 2>&1)",
+      "Bash(cd \"C:/Users/hp/Downloads/ykefolds\" && npm install --prefix /tmp/docx-reader mammoth 2>&1 | tail -3 && node -e \"\nconst mammoth = require\\('/tmp/docx-reader/node_modules/mammoth'\\);\nconst path = require\\('path'\\);\nconst filePath = path.resolve\\('ABOUT THE COMPANY.docx'\\);\nmammoth.extractRawText\\({path: filePath}\\).then\\(result => console.log\\(result.value\\)\\).catch\\(e => console.error\\(e\\)\\);\n\" 2>&1)",
+      "Bash(cd \"C:/Users/hp/Downloads/ykefolds\" && npm install mammoth 2>&1 | tail -3 && node -e \"\nconst mammoth = require\\('mammoth'\\);\nconst path = require\\('path'\\);\nmammoth.extractRawText\\({path: path.resolve\\('ABOUT THE COMPANY.docx'\\)}\\).then\\(r => console.log\\(r.value\\)\\).catch\\(e => console.error\\(e\\)\\);\n\" 2>&1)",
+      "Bash(cd /c/Users/hp/Desktop/ykefolds && git add .gitignore README.md next.config.js package.json package-lock.json tsconfig.json \"images/hero image.png\" \"videos/section_video1.mp4\" public/ src/)",
+      "Bash(cd /c/Users/hp/Desktop/ykefolds && git commit -m \"$\\(cat <<'EOF'\nInitial commit: Next.js project with component-based architecture\n\nIncludes Hero, Navbar, About, Services, Gallery, Contact, Footer,\nVisionMission, and WhyChooseUs components with associated styles.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh auth status 2>&1)",
+      "Bash(winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements 2>&1)",
+      "Bash(export PATH=\"/c/Program Files/GitHub CLI:$PATH\" && gh auth status 2>&1)",
+      "Bash(cd /c/Users/hp/Desktop/ykefolds && export PATH=\"/c/Program Files/GitHub CLI:$PATH\" && gh repo create ykefolds --public --source=. --remote=origin --push 2>&1)"
+    ]
+  }
+}

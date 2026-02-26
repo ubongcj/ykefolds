@@ -13,51 +13,51 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    src: "/images/hero-bg.png",
-    category: "Industrial",
-    title: "Industrial Scaffolding Project",
-  },
-  {
-    id: 2,
-    src: "/images/hero-bg.png",
-    category: "Offshore",
-    title: "Offshore Platform Installation",
-  },
-  {
-    id: 3,
-    src: "/images/hero-bg.png",
+    src: "/images/services/civil/civil-1.png",
     category: "Civil",
     title: "Civil Construction Support",
   },
   {
+    id: 2,
+    src: "/images/services/civil/civil-2.png",
+    category: "Civil",
+    title: "Structural Scaffolding Framework",
+  },
+  {
+    id: 3,
+    src: "/images/services/civil/civil-3.png",
+    category: "Civil",
+    title: "Building Access Systems",
+  },
+  {
     id: 4,
-    src: "/images/hero-bg.png",
-    category: "Industrial",
-    title: "Refinery Maintenance Scaffolding",
-  },
-  {
-    id: 5,
-    src: "/images/hero-bg.png",
-    category: "Offshore",
-    title: "Subsea Pipeline Support Structure",
-  },
-  {
-    id: 6,
-    src: "/images/hero-bg.png",
+    src: "/images/services/civil/civil-4.png",
     category: "Civil",
     title: "Bridge Restoration Framework",
   },
   {
-    id: 7,
-    src: "/images/hero-bg.png",
+    id: 5,
+    src: "/images/services/civil/civil-1.png",
     category: "Industrial",
-    title: "Power Plant Access Systems",
+    title: "Industrial Scaffolding Project",
+  },
+  {
+    id: 6,
+    src: "/images/services/civil/civil-2.png",
+    category: "Industrial",
+    title: "Refinery Maintenance Scaffolding",
+  },
+  {
+    id: 7,
+    src: "/images/services/civil/civil-3.png",
+    category: "Offshore",
+    title: "Offshore Platform Installation",
   },
   {
     id: 8,
-    src: "/images/hero-bg.png",
+    src: "/images/services/civil/civil-4.png",
     category: "Offshore",
-    title: "Wind Farm Assembly Platform",
+    title: "Subsea Pipeline Support Structure",
   },
 ];
 
