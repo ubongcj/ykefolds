@@ -1,0 +1,189 @@
+/* ===================================================
+   Hero Section
+   =================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ---------- Dark overlay ---------- */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.7);
+  z-index: 1;
+}
+
+/* ---------- Background video ---------- */
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* ---------- Content ---------- */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 850px;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Headline ---------- */
+.hero__headline {
+  color: var(--white, #ffffff);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+/* ---------- Subtitle ---------- */
+.hero__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 2.5rem;
+}
+
+/* ---------- CTA button group ---------- */
+.hero__cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Shared button base ---------- */
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease,
+    color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ---------- Outlined button ---------- */
+.hero__btn--outline {
+  color: var(--white, #ffffff);
+  border: 2px solid var(--white, #ffffff);
+  background: transparent;
+}
+
+.hero__btn--outline:hover {
+  background: var(--white, #ffffff);
+  color: var(--primary, #e8792f);
+  transform: scale(1.05);
+}
+
+/* ---------- Filled button ---------- */
+.hero__btn--filled {
+  color: var(--white, #ffffff);
+  background: var(--primary, #e8792f);
+  border: 2px solid var(--primary, #e8792f);
+}
+
+.hero__btn--filled:hover {
+  background: var(--primary-dark, #c5631f);
+  border-color: var(--primary-dark, #c5631f);
+  transform: scale(1.05);
+}
+
+/* ---------- Scroll indicator ---------- */
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: bounce 2s ease infinite;
+}
+
+.hero__chevron {
+  color: var(--white, #ffffff);
+  opacity: 0.8;
+}
+
+/* ---------- Bounce keyframes ---------- */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-12px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+}
+
+/* ===================================================
+   Responsive — Tablet & below (max-width: 768px)
+   =================================================== */
+@media (max-width: 768px) {
+  .hero__headline {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero__btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  .hero__cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ===================================================
+   Responsive — Small phones (max-width: 480px)
+   =================================================== */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero__headline {
+    font-size: 1.65rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero__btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}

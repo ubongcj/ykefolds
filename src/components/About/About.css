@@ -1,0 +1,214 @@
+/* ===================================================
+   About Section
+   =================================================== */
+
+.about-section {
+  background-color: var(--white);
+}
+
+/* ---------- Grid layout ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ---------- Image column ---------- */
+.about-image {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Accent bar on the left side */
+.about-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--primary);
+  z-index: 1;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- Text column ---------- */
+.about-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.about-content p {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ---------- "About Us" tag ---------- */
+.about-tag {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.about-tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 2px;
+  background: var(--primary);
+}
+
+/* ===================================================
+   Stats Bar
+   =================================================== */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--secondary);
+  padding: 40px;
+  border-radius: var(--radius);
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+/* Subtle divider between stat items */
+.stat-item + .stat-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+/* ===================================================
+   Responsive -- Tablet (max-width: 992px)
+   =================================================== */
+@media (max-width: 992px) {
+  .about-grid {
+    gap: 40px;
+  }
+
+  .about-content h2 {
+    font-size: 1.9rem;
+  }
+}
+
+/* ===================================================
+   Responsive -- Tablet & below (max-width: 768px)
+   =================================================== */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image {
+    max-height: 350px;
+  }
+
+  .about-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px;
+  }
+
+  /* Remove vertical divider on mobile grid where items wrap */
+  .stat-item:nth-child(odd)::before {
+    display: none;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+/* ===================================================
+   Responsive -- Small phones (max-width: 480px)
+   =================================================== */
+@media (max-width: 480px) {
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .stats-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}

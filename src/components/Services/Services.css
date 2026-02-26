@@ -1,0 +1,195 @@
+/* ===================================================
+   Services Section
+   =================================================== */
+
+/* ---------- Grid layout ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ---------- Card base ---------- */
+.service-card {
+  position: relative;
+  min-height: 350px;
+  border-radius: var(--radius, 8px);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ---------- Background image ---------- */
+.service-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+/* ---------- Dark gradient overlay ---------- */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 22, 40, 0.75),
+    rgba(10, 22, 40, 0.9)
+  );
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+/* ---------- Card content ---------- */
+.service-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  color: var(--white, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+/* ---------- Icon circle ---------- */
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary, #e8630a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--white, #ffffff);
+  fill: none;
+}
+
+/* ---------- Typography ---------- */
+.service-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--white, #ffffff);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Hidden detail text ---------- */
+.service-detail {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: opacity 0.4s ease, max-height 0.4s ease, margin-top 0.4s ease;
+}
+
+/* ---------- Hover effects ---------- */
+.service-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.service-card:hover .service-card-bg {
+  transform: scale(1.1);
+}
+
+.service-card:hover::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 22, 40, 0.6),
+    rgba(10, 22, 40, 0.8)
+  );
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-card:hover .service-detail {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 10px;
+}
+
+/* ===================================================
+   Responsive -- Tablet (max-width: 1024px)
+   =================================================== */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ===================================================
+   Responsive -- Mobile (max-width: 768px)
+   =================================================== */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+
+  .service-card-content {
+    padding: 24px;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ===================================================
+   Responsive -- Small phones (max-width: 480px)
+   =================================================== */
+@media (max-width: 480px) {
+  .service-card {
+    min-height: 260px;
+  }
+
+  .service-card-content {
+    padding: 20px;
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+
+  .service-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .service-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+}
