@@ -4,6 +4,7 @@ import About from '@/components/About/About'
 import Services from '@/components/Services/Services'
 import WhyChooseUs from '@/components/WhyChooseUs/WhyChooseUs'
 import VisionMission from '@/components/VisionMission/VisionMission'
+import Director from '@/components/Director/Director'
 import Gallery from '@/components/Gallery/Gallery'
 import Contact from '@/components/Contact/Contact'
 import Footer from '@/components/Footer/Footer'
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <VisionMission />
+      <Director />
       <Gallery />
       <Contact />
       <Footer />
