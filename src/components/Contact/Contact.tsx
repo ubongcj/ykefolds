@@ -224,7 +224,7 @@ const Contact: React.FC = () => {
 
             <div className="social-links">
               <a
-                href="https://facebook.com/YKEFOLD.INTEGRATED.SERVICE"
+                href="https://www.facebook.com/share/14WV7CHAcyR/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"

@@ -44,7 +44,7 @@ const Director: React.FC = () => {
           <div className="director-image fade-in-left">
             <Image
               src="/images/director.jpg"
-              alt="Ndifreke Johnson Udoh - Managing Director"
+              alt="Johnson Udoh - Managing Director"
               width={500}
               height={600}
               priority={false}
@@ -53,10 +53,10 @@ const Director: React.FC = () => {
 
           <div className="director-content fade-in-right">
             <span className="director-tag">Managing Director</span>
-            <h3>Ndifreke Johnson Udoh</h3>
+            <h3>Johnson Udoh</h3>
             <p>
               With over a decade of hands-on experience in the scaffolding and
-              construction industry, Ndifreke Johnson Udoh founded Ykefolds
+              construction industry, Johnson Udoh founded Ykefolds
               Integrated Service Limited with a clear vision: to deliver
               world-class scaffolding solutions that meet the highest standards
               of safety, quality, and reliability.
