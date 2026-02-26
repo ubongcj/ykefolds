@@ -190,7 +190,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4>Phone</h4>
-                <p>+234 803 XXX XXXX</p>
+                <p>+2348052444082</p>
               </div>
             </div>
 
@@ -203,6 +203,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <h4>Email</h4>
+                <p>johnsonakpanudoh@ykefolds.com</p>
                 <p>ykefold@gmail.com</p>
                 <p>bennetakpadiaha@gmail.com</p>
               </div>
